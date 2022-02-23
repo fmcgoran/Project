@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}Landing Page{% endblock %} {% block content
+    %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css')}}"
+    />
+    <style>
+        h1   {color: rgb(44, 168, 199);}
+        p   {color: rgba(15, 130, 141, 0.753);}
+        </style>
+    <h1 style="font-size:40px;"> Walkies</h1>
+    <p> A dog walking application which aids dog walkers and dog owners.</p>
+    <image src="{{ url_for('static', filename='images/Walkies-logos.jpeg')}}" width="500" height="300" class="center"></image>
+    {% endblock %}  
