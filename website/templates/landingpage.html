@@ -8,5 +8,45 @@
         </style>
     <h1 style="font-size:40px;"> Walkies</h1>
     <p> A dog walking application which aids dog walkers and dog owners.</p>
-    <image src="{{ url_for('static', filename='images/Walkies-logos.jpeg')}}" width="500" height="300" class="center"></image>
+    <div class="polaroid">
+        <img src="{{ url_for('static', filename='images/Charlie.jpg')}}"  alt="Charlie" style="width:100%">
+        <div class="container">
+        <p>Charlie</p>
+        </div>
+      </div>
+    <div class="polaroid">
+        <img src="{{ url_for('static', filename='images/Harvey.jpg')}}" alt="Harvey" style="width:100%">
+        <div class="container">
+        <p>Harvey</p>
+        </div>
+      </div>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Map</title>
+        <style>
+            #map{
+                height:400px;
+                width:100%;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <h1>Our dog walkers locations:</h1>
+        <div id="map"></div>
+        <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='map.js') }}"
+      ></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt6oXhXfiULiKfXClmATFw0t1AxL9JYXE&callback=initMap"
+          async
+        ></script>
+    
+    </body>
+      
+       
     {% endblock %}  

@@ -2,12 +2,18 @@
 {% block title %}SignUp{% endblock %} {% block content %}
   
 <form method="POST">
-    <h3 align="center">Sign Up</h3>
+    <h3 align="center">Create an Account</h3><br>
+    <div class="form-group">
+     <input type="radio" id="owner" name="type" value="owner">
+    <label for="owner">I am a dog owner.</label><br>
+    <input type="radio" id="walker" name="type" value="walker">
+    <label for="walker">I am a dog walker.</label><br>
+      </div>
     <div class="form-group">
       <label for="email">Email Address:</label>
       <input
         type="email"
-        class="form-control"
+        class="form-control" 
         id="email"
         name="email"
         placeholder="Enter email"
@@ -44,6 +50,8 @@
       />
     </div>
     <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-info">Submit</button>
   </form>
+
+
 {% endblock %} 

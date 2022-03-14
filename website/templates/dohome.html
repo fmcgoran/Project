@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Signed in Dog Owners home page{% endblock %}
+{% block content%}
+WELCOME SIGNED IN DOG OWNERS here is where I will display the dog walkers
+<ul class="list-group list-group-flush" id="Users">
+    {% for user in users %}
+    <li class="list-group-item">
+      <ul>{{ user.firstName }}</ul>
+      <ul>{{ user.email }}</ul>
+      <ul></ul>
+      
+
+    </li>
+    {% endfor %}
+  </ul> 
+{% endblock %} 

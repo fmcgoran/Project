@@ -1,6 +1,7 @@
 from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
+from datetime import datetime
 
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -14,6 +15,10 @@ class User(db.Model, UserMixin):
     email =  db.Column(db.String(150), unique=True) #no user can have the same email as another user
     password = db.Column(db.String(150))
     firstName = db.Column(db.String(150))
+    type = db.Column(db.String(150))
     notes = db.relationship('Note')
+
+ 
+    
 
 

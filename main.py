@@ -5,3 +5,4 @@ app = create_app()
 if __name__ == '__main__':
     app.run(debug=True)  # automatically reruns python server anytime a change is made
     
+    
